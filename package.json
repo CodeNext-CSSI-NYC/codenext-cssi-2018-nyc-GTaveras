@@ -1,0 +1,22 @@
+{
+  "name": "codenext-cssi-2018-nyc-gtaveras",
+  "version": "1.0.0",
+  "description": "",
+  "main": "change-machine.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeNext-CSSI-NYC/codenext-cssi-2018-nyc-GTaveras.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeNext-CSSI-NYC/codenext-cssi-2018-nyc-GTaveras/issues"
+  },
+  "homepage": "https://github.com/CodeNext-CSSI-NYC/codenext-cssi-2018-nyc-GTaveras#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
+}
