@@ -1,5 +1,6 @@
 // Author: Giovanni Taveras
 var readline = require("readline-sync");
+
 console.log("Poopy-di scoop Scoop-diddy-whoop. ")
 var cents = readline.question("Please enter a cents as a positive integer: ");
 let q = Math.floor(cents / 25);
