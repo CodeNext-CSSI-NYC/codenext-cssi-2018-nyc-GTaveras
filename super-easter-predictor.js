@@ -17,4 +17,7 @@ let n = Math.floor((h + r - 7 * m + 114) / 31);
 let p = (h + r - 7 * m + 114) % 31;
 let day = p + 1;
 let month = n;
+console.log("Welcome to Super Easter Predictor!");
+console.log("Please enter a year greater than 1582: but less than 2003")
 console.log("This year Easter is on " + month + "/" + day);
+console.log("Goodbye!");
