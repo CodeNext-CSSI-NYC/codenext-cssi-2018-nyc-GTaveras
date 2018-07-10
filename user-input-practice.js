@@ -24,6 +24,4 @@ var readline = require("readline-sync");
 
 var userNumber1 = parseInt(readline.question("Please enter a number: "));
 var userNumber2 = parseInt(readline.question("Please enter a second number: "));
-// var average = Math.avg(userNumber1, userNumber2);
-// var average = parseInt(userNumber1);
 console.log("The average of " + userNumber1 + " and " + userNumber2 + " is " + ((userNumber1 + userNumber2) / 2));
