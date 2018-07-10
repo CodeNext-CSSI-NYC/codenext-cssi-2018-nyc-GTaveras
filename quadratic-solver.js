@@ -5,8 +5,8 @@
 
 // Here is where you will set the coefficients
 const a = 1;
-const b = 15;
-const c = 44;
+const b = 6;
+const c = 10;
 
 // Fill in the code below based on the quadratic formula
 // Hint: for this next line, you will need to use a math concept that we haven't talked about.
