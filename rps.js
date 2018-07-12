@@ -12,9 +12,9 @@ if (compNum > 0 && compNum < 1) {
 var rps = readline.question("rock, paper or scissors: ");
 if (rps == compChoice){
   console.log("The computer chose " + compChoice + ". You chose " + rps + ". It was a tie!")
-} else if((rps == "paper" && compChoice == "scissor") || (rps == "rock" && compChoice == "paper") || (rps == "scissor" && compChoice == "rock")){
+} else if((rps == "paper" && compChoice == "scissors") || (rps == "rock" && compChoice == "paper") || (rps == "scissors" && compChoice == "rock")){
   console.log("The computer chose " + compChoice + ". You chose " + rps + ". You lost!");
-} else if((rps == "scissor" && compChoice == "paper") || (rps == "paper" && compChoice == "rock") || (rps == "rock" && compChoice == "scissor")){
+} else if((rps == "scissors" && compChoice == "paper") || (rps == "paper" && compChoice == "rock") || (rps == "rock" && compChoice == "scissors")){
   console.log("The computer chose " + compChoice + ". You chose " + rps + ". You won!");
 }
 
