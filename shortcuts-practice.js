@@ -5,7 +5,7 @@
 let a = 7;
 a += 1;
 console.log(a);
-a ++;
+a++;
 console.log(a);
 // 2. Double the value of the variable below using a multiplication shortcut.
 // Print out its value before and after each step to make sure it worked.
