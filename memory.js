@@ -23,7 +23,12 @@ let readline = require("readline-sync");
 // If it contains an X, it should return false, because the game is not over.
 // If it contains no X's, it should return true, because the game is over.
 function isGameOver(tracker) {
-  // Your code here
+  for (var i = 0; i < tracker.length; i++) {
+    if (tracker[i] == "X") {
+      return false;
+    }
+  }
+  return true;
 }
 
 // This function prints out the tracker array so that the user can see how they are doing.
@@ -35,7 +40,11 @@ function isGameOver(tracker) {
 // and then adds a space to the new string.
 // After the loop is over, it prints out this string.
 function render(tracker) {
-  // Your code here
+  var trackerStr = "";
+  for (var i = 0; i < tracker.length; i++) {
+    trackerStr = trackerStr + tracker[i] + " ";
+  }
+  console.log(trackerStr);
 }
 
 // This function returns a shuffled array of numbers, like [2, 3, 1, 3, 0, 2, 0, 1]
@@ -46,7 +55,13 @@ function render(tracker) {
 // The last line should be: return shuffle(arr)
 // This will shuffle and return the array.
 function shuffleCards(numMatches) {
-  // Your code here
+  var arr = [];
+  for (var i = 0; i < numMatches; i++) {
+    var temp = 1 + numMatches;
+    arr.push(i);
+    arr.push(i);
+  }
+  return shuffle(arr);
 }
 
 // This function returns an array like ["X", "X", "X", "X", "X", "X", "X", "X"]
@@ -59,7 +74,12 @@ function shuffleCards(numMatches) {
 // So if numMatches is 4, we will have 8 X's.
 // Return this array.
 function createTracker(numMatches) {
-  // Your code here
+  var arr = [];
+  for (var i = 0; i < numMatches; i++) {
+    arr.push("X");
+    arr.push("X");
+  }
+  return arr;
 }
 
 // This function controls the whole game.
@@ -92,7 +112,23 @@ function play() {
   let tracker = createTracker(numMatches);
   let numGuesses = 0;
   console.clear();
-  // Your code here
+  while (isGameOver != true) {
+    render(tracker);
+    numGuesses += 1;
+    var index1 = readline.question("Which card do you want to flip over: ");
+    var index2 = readline.question("What's the second card you want to flip over: ");
+    var current1 = tracker[index1];
+    var current2 = tracker[index2];
+    answer[index1] = tracker[index1];
+    answer[index2] = tracker[index2];
+    console.clear();
+    render(tracker);
+    if (tracker[index1] != tracker[index2] || index1 == index2) {
+      tracker[index1] = current1;
+      tracker[index2] = current2;
+    }
+    console.log("It took you " + numGuesses + " guesses.")
+  }
 }
 
 function run() {
