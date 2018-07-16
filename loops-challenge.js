@@ -51,10 +51,18 @@ hasb_b("b9b") → true
 hasb_b("bac") → false
 *******************************************************************************/
 
-function hasb_b() {
-
+function hasb_b(str) {
+  for (var i = 0; i < str.length; i++) {
+    if (str.charAt(i) == "b") {
+      if (str.charAt(i + 2) == "b") {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
+// console.log(hasb_b("bac"));
 // Uncomment the line below to test this function.
 // testHasB_B();
 
