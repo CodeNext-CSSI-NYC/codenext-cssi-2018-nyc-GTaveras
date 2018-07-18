@@ -46,6 +46,9 @@ function listDuplicates(arr) {
     for (j = 0; j < arr.length; j++) {
       currentWord = arr[j]
       if (word == currentWord && i != j) {
+        for (var b = 0; b <= duplicate.length b++) {
+
+        }
         console.log(word);
         // return true;
       }
