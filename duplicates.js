@@ -7,6 +7,7 @@
 
 // Get a basic version of this working. You should return true if there is at least one duplicated value.
 
+let duplicate = [];
 
 function hasDuplicate(arr) {
   let currentWord = 0;
@@ -25,7 +26,7 @@ function hasDuplicate(arr) {
   return false;
 }
 // Here are some examples you can use to test
-let arr1 = [3, 2, 4, 3, 4];
+let arr1 = [3, 2, 4, 3, 4, 5];
 let arr2 = ["apple", "banana", "pear", "banana"];
 // Also make some examples where the answer is false
 console.log(listDuplicates(arr1));
@@ -39,6 +40,7 @@ function listDuplicates(arr) {
   let currentWord = 0;
   let word = 0;
   duplicate = [];
+
   let i = 0;
   let j = 0;
   for (i = 0; i < arr.length; i++) {
@@ -46,14 +48,12 @@ function listDuplicates(arr) {
     for (j = 0; j < arr.length; j++) {
       currentWord = arr[j]
       if (word == currentWord && i != j) {
-        for (var b = 0; b <= duplicate.length b++) {
-
-        }
-        console.log(word);
-        // return true;
+        duplicate.push(word);
+        // console.log(word);
       }
     }
   }
+  console.log(duplicate)
   return false;
 }
 
@@ -64,8 +64,18 @@ function listDuplicates(arr) {
 // 3. A related question (though one that has nothing to do with nested loops)
 // is to find the mode (the item that appears most often) of an array.
 // Write a function that does that.
+//this function is incomplete. It still needs a counter for the strings and variables, and does not yet fully run through the whole array and count how many of each there are
 function findMode(arr) {
-
+  for (i = 0; i < duplicate.length; i++) {
+    mode = duplicate[i];
+    for (j = 0; j < duplicate.length; j++) {
+      let currentWord = duplicate[j]
+      if (word == currentWord && i != j) {
+        duplicate.push(word);
+        // console.log(word);
+      }
+    }
+  }
 }
 // If you test with [3,4,5,4,7,4,2,5,9] it should return 4.
 // If it's a case where multiple items appear the most, you can decide to either
