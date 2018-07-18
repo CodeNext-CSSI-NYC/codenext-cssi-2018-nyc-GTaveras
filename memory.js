@@ -106,29 +106,29 @@ function createTracker(numMatches) {
 function play() {
   // This line controls how many pairs of numbers will be in the game.
   // I recommend starting with 4 pairs and trying bigger numbers later.
-  let numMatches = 4;
+  let numMatches = 5;
   // Don't change these next three lines.
   let answer = shuffleCards(numMatches);
   let tracker = createTracker(numMatches);
   let numGuesses = 0;
   console.clear();
-  while (isGameOver != true) {
+  while (isGameOver(tracker) != true) {
     render(tracker);
     numGuesses += 1;
-    var index1 = readline.question("Which card do you want to flip over: ");
-    var index2 = readline.question("What's the second card you want to flip over: ");
+    var index1 = readline.question("Which card do you want to flip over: ") - 1;
+    var index2 = readline.question("What's the second card you want to flip over: ") - 1;
     var current1 = tracker[index1];
     var current2 = tracker[index2];
-    answer[index1] = tracker[index1];
-    answer[index2] = tracker[index2];
+    tracker[index1] = answer[index1];
+    tracker[index2] = answer[index2];
     console.clear();
     render(tracker);
     if (tracker[index1] != tracker[index2] || index1 == index2) {
       tracker[index1] = current1;
       tracker[index2] = current2;
     }
-    console.log("It took you " + numGuesses + " guesses.")
   }
+  console.log("It took you " + numGuesses + " guesses. Nice job")
 }
 
 function run() {
