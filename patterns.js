@@ -67,18 +67,18 @@
 // and then add stars.
 // Hint2 -- You could consider adding the stars first and then
 // adding the spaces to the beginning of the string.
-var spaces = 5;
-for (let i = 1; i < 6; i++) {
-  let myRow = [];
-  for (var c = 0; c < i; c++) {
-    for (var s = 1; spaces - s >= 1; s++) {
-      console.log(myRow);
-      // myRow.unshift(" ");
-    }
-    myRow += "*";
-  }
-  console.log(myRow)
-}
+// var spaces = 5;
+// for (let i = 1; i < 6; i++) {
+//   let myRow = [];
+//   for (var c = 0; c < i; c++) {
+//     for (var s = 1; spaces - s >= 1; s++) {
+//       console.log(myRow);
+//       // myRow.unshift(" ");
+//     }
+//     myRow += "*";
+//   }
+//   console.log(myRow)
+// }
 
 //     *
 //    **

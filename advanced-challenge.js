@@ -14,26 +14,26 @@ canBalance([2, 1, 1, 2, 1]) → false
 canBalance([10, 10]) → true
 *******************************************************************************/
 
-function canBalance(nums) {
-  var first = 0;
-  var second = 0;
-
-  for (var i = 0; i < nums.length; i++) {
-    second += nums[i];
-  }
-
-  for (var i = 0; i <= nums.length - 2; i++) {
-    first += nums[i];
-    second -= nums[i];
-    if (first == second) {
-      return true;
-    }
-  }
-  return false;
-}
+// function canBalance(nums) {
+//   var first = 0;
+//   var second = 0;
+//
+//   for (var i = 0; i < nums.length; i++) {
+//     second += nums[i];
+//   }
+//
+//   for (var i = 0; i <= nums.length - 2; i++) {
+//     first += nums[i];
+//     second -= nums[i];
+//     if (first == second) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
 
 // Test this function.
-testCanBalance();
+// testCanBalance();
 
 /******************************************************************************
                                     maxSpan()
@@ -49,9 +49,12 @@ maxSpan([1, 4, 2, 1, 4, 1, 4]) → 6
 maxSpan([1, 4, 2, 1, 4, 4, 4]) → 6
 *******************************************************************************/
 
-function maxSpan(nums) {
-
-}
+// function maxSpan(nums) {
+//   let span = nums.length - 1;
+//   return span;
+//   //WRONG
+// }
+//find the biggest gap between the same number
 
 // Test this function.
 // testMaxSpan();
@@ -72,11 +75,20 @@ linearIn([1, 2, 4, 4, 6], [2, 4]) → true
 *******************************************************************************/
 
 function linearIn(outer, inner) {
-
+  let allOfInner = 0;
+  for (var i = 0; i < inner.length; i++) {
+    for (var j = 0; j < outer.length; j++) {
+      if (!outer.includes(inner[i])) {
+        return false;
+      }
+    }
+  }
+  return true;
 }
 
 // Test this function.
-// testLinearIn();
+testLinearIn();
+// console.log([1, 2, 3].includes(2));
 
 
 
