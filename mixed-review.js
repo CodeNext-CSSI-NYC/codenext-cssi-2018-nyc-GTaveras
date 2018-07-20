@@ -16,7 +16,9 @@ let randomInt = require('random-int');
 // 1. Write a function that takes in a number and then returns a string that
 // looks like: "7 is odd" (or even if the number is even).
 function evenOdd(num) {
-
+  if (num % 2 == 0) {
+    return num + " "
+  }
 }
 // For example, if they type in 7 it would return: "7 is odd".
 // If your function is correct, these should both print true.
